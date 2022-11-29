@@ -1,0 +1,532 @@
+ex 1
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int i;
+    
+    for(i = 0; i < n; i++){
+        v[i] = i;
+        printf("%d ", v[i]); 
+    }
+    printf("\n vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n");
+
+    return 0;    
+}
+//------------------------------------------------------------------------
+ex 2
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int i;
+    printf("vetor atual: \n");
+    for(i = n - 1; i >= 0; i--){
+        v[i] = i;
+        printf("%d ", v[i]); 
+    }
+    printf("\n vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n");
+    return 0;    
+}
+//-------------------------------------------------------------------------
+ex 3
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int i;
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);       
+    }
+    printf("vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\nvetor atual: \n");   
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n");
+    return 0;    
+}
+//----------------------------------------------------------
+ex 4
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int i;
+    for(i = n; i > 0; i--){
+        scanf("%d", &v[i]);       
+    }     
+
+    printf("vetor atual: \n");
+    for(i = n; i > 0; i--){
+        printf("%d ", v[i]);       
+    }
+    printf("\n");
+    return 0;    
+}
+//----------------------------------------------------------
+ex 5 a
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int v2[n];
+    int i;
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);  
+        v2[n-i-1] = v[i];  
+    }
+
+    printf("vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n copia vetor: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v2[i]);       
+    }
+    printf("\n");
+    return 0;    
+}
+//-------------------------------------------------------------
+ex 5 b
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int i;
+    int soma = 0;
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);  
+        soma = soma + v[i];  
+    }
+
+    printf("vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n soma do vetor: ");
+    printf("%d \n", soma);
+    printf("\n");
+    return 0;    
+}
+//------------------------------------------------------------------
+ex 5 c
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int i;
+    int soma = 0;
+    float media;
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);  
+        soma = soma + v[i];  
+    }
+
+    media = soma/n;
+
+    printf("vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n media do vetor: ");
+    printf("%f \n", media);
+    printf("\n");
+    return 0;    
+}
+//----------------------------------------------------------------------
+ex 5 d
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+
+    int v[n];
+    int i;
+    int maior;
+    int menor;
+    scanf("%d", &v[0]);
+    maior = v[0];
+    menor = v[0];
+
+    for(i = 1; i < n; i++){
+        scanf("%d", &v[i]);  
+        if(v[i] > maior)
+            maior = v[i];
+        if(v[i] < menor)
+            menor = v[i];
+    }
+
+    printf(" vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n maior do vetor: ");
+    printf("%d \n", maior);
+
+    printf("\n menor do vetor: ");
+    printf("%d \n", menor);
+    printf("\n");
+    return 0;    
+}
+//-------------------------------------------------------------------
+ex 6
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+
+    int v[n];
+    int v2[n];
+    int prod[n];
+    int i;
+
+
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);
+        v2[i] = v[i];  
+        prod[i] = v2[i] * v[i];
+    }
+
+
+    printf(" vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+
+    printf(" vetor 2: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v2[i]);       
+    }
+
+    printf(" prod vetores: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", prod[i]);       
+    }
+    printf("\n");
+    return 0;    
+}
+//-----------------------------------------------------------
+ex 7
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+
+    int v[n];
+    int i;
+    int maior = 0;
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);
+        if(v[i] > maior)
+            maior = v[i];
+    }
+    maior++;
+    int aux[maior];
+    for(i = 0; i < maior; i++){
+        aux[i] = 0;
+    }
+    for(i = 0; i < n; i++){
+        aux[v[i]]++;
+    }
+    printf("vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);
+    }
+    printf("\nrepetições: \n");
+    for(i = 0; i < maior; i++){
+        if (aux[i] != 0)
+            printf("elemento %d apareceu %d vezes \n", i, aux[i]);
+    }
+    return 0;
+}
+
+//--------------------------------------------------------------------
+ex 8 v1
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+
+    int v[n];
+    int v2[n];
+    int conc[n * 2];
+    int i;
+
+
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);
+        v2[i] = v[i];
+    }
+
+    for(i = 0; i < n; i++){
+        conc[i] = v[i];
+    }
+
+    for(int i = 0;i < (2*n);i++){
+        if(i < n)
+            conc[i] = v[i];
+        else
+            conc[i] = v2[i - n];
+    }
+
+    printf("\n vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);
+    }
+
+    printf("\n vetor 2: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v2[i]);
+    }
+
+    printf("\n vetores concatenados: \n");
+    for(i = 0; i < n * 2; i++){
+        printf("%d ", conc[i]);
+    }
+    printf("\n");
+    return 0;
+}
+//------------------------------------------------------
+ex 8 v2
+#include <stdio.h> 
+
+int main (){
+    int n1;
+    printf("Entre com o tamanho do vetor 1: ");
+    scanf("%d", &n1);
+    if(n1 > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+
+    int n2;
+    printf("Entre com o tamanho do vetor 2: ");
+    scanf("%d", &n2);
+    if(n2 > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int n3;
+    n3 = n1 + n2;
+
+    int v[n1];
+    int v2[n2];
+    int conc[n3];
+    int i;
+
+    printf("Entre com o vetor 1: ");
+    for(i = 0; i < n1; i++){
+        scanf("%d", &v[i]);
+    }
+    printf("Entre com o vetor 2: ");
+    for(i = 0; i < n2; i++){
+        scanf("%d", &v2[i]);
+    }
+
+    for(i = 0; i < n1; i++){
+        conc[i] = v[i];
+    }
+
+    for(int i = 0;i < n3;i++){
+        if(i < n1)
+            conc[i] = v[i];
+        else
+            conc[i] = v2[i - n1];
+    }
+
+    printf("vetor original: \n");
+    for(i = 0; i < n1; i++){
+        printf("%d ", v[i]);
+    }
+
+    printf("\nvetor 2: \n");
+    for(i = 0; i < n2; i++){
+        printf("%d ", v2[i]);
+    }
+
+    printf("\nvetores concatenados: \n");
+    for(i = 0; i < n3; i++){
+        printf("%d ", conc[i]);
+    }
+    printf("\n");
+    return 0;
+}
+//------------------------------------------------------
+ex 9 
+
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+
+    int v[n];
+    int i;
+    int maior = 0;
+    printf("Entre com o vetor: ");
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);
+        if(v[i] > maior)
+            maior = v[i];
+    }
+
+    maior++;
+    int aux[maior];
+    for(i = 0; i < maior; i++){ //preenche com 0 o vetor auxiliar
+        aux[i] = 0;
+    }
+
+    for(i = 0; i < n; i++){
+        aux[v[i]]++;
+    }
+    int cont = 0;
+    for(i = 0; i < maior; i++){
+        if(aux[i] != 0)
+            cont++;
+            
+    }
+    printf("Vetor original: ");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);
+    }
+
+    printf("\nNúmero de elementos repetidos: %d \n", cont);
+    printf("Elementos que repetiram: ");
+    for(i = 0; i < maior; i++){
+        if (aux[i] != 0)
+            printf("%d  ", i);
+    }
+    printf("\n");
+    return 0;
+}
+
+//------------------------------------------------------
+ex 10
+#include <stdio.h> 
+
+int main (){
+    int n;
+    printf("Entre com o valor de N: ");
+    scanf("%d", &n);
+    if(n > 1024) {
+        printf("numero invalido \n");
+        return 0;
+    }
+    int v[n];
+    int i;
+    int par = 0;
+    int impar = 0;
+    
+    for(i = 0; i < n; i++){
+        scanf("%d", &v[i]);  
+        if((v[i] % 2) == 0) 
+            par ++;
+        else
+            impar++;
+    }
+
+
+    printf("vetor original: \n");
+    for(i = 0; i < n; i++){
+        printf("%d ", v[i]);       
+    }
+    printf("\n qtde pares: ");
+    printf("%d \n", par);
+
+    printf("\n qtde impares: ");
+    printf("%d \n", impar);
+    printf("\n");
+    return 0;    
+}
+//----------------------------------------------------
